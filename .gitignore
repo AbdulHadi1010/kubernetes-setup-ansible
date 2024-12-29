@@ -1,2 +1,3 @@
-.vagrant/*
-.vscode/*
+kubernetes/sazebtech/.vagrant/*
+kubernetes/sazebtech/.vscode/*
+
