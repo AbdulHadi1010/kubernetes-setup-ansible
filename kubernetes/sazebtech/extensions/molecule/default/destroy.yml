@@ -1,0 +1,15 @@
+---
+- name: Destroy
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Destroy molecule instance(s)
+    command: >
+      vagrant destroy -f
+    args:
+      chdir: "{{ molecule_ephemeral_directory }}"
+
+  # - name: Remove molecule instance(s)
+  #   file:
+  #     path: "{{ molecule_ephemeral_directory }}"
+  #     state: absent

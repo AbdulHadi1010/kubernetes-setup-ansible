@@ -1,0 +1,45 @@
+---
+dependency:
+  name: galaxy
+
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+
+platforms:
+- name: instance
+  box: ubuntu/bionic64
+  memory: 2048
+  cpus: 2
+  ssh_user: vagrant
+  ssh_key: /collections/ansible-collections/kubernetes/sazebtech/.vagrant/machines/default/virtualbox/private_key
+  host: 127.0.0.1
+  port: 2222
+  interfaces:
+  - network_name: private_network
+    ip: 192.168.50.20
+    guest: 80
+    host: 8080
+  provider_raw_config_args:
+  - "customize [ 'modifyvm', :id, '--natdnshostresolver1', 'on' ]"
+  - "customize ['modifyvm', :id, '--natpf1', 'ssh,tcp,,2222,,22']"
+  config_options:
+    ssh.keep_alive: yes
+    ssh.remote_user: vagrant
+
+provisioner:
+  name: ansible
+  prepare: prepare.yml
+  inventory:
+    host_vars:
+      instance:
+        ansible_host: 127.0.0.1
+        ansible_port: 2222
+        ansible_user: vagrant
+        ansible_ssh_private_key_file: /collections/ansible-collections/kubernetes/sazebtech/.vagrant/machines/default/virtualbox/private_key
+
+        ansible_python_interpreter: /usr/bin/python3
+
+verifier:
+  name: ansible

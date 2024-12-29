@@ -1,0 +1,21 @@
+---
+- name: Prepare the VM for Ansible
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: Install Python 3.10+
+    ansible.builtin.raw: |
+      command -v python3.10 >/dev/null || (
+      (command -v apt && sudo apt -y update && sudo apt install -y python3.10 python3.10-distutils) ||
+      (command -v dnf && sudo dnf -y install python3.10) ||
+      echo "Failed to install Python 3.10: Unsupported platform"
+      )
+    become: true
+    become_method: sudo
+    become_user: root
+
+  - name: Verify Python 3.10 installation
+    ansible.builtin.command: python3.10 --version
+    become: true
+    become_method: sudo
+    become_user: root

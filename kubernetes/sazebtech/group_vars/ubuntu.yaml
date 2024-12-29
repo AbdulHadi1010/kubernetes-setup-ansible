@@ -1,0 +1,12 @@
+pkg_manager: apt
+kube_packages:
+- kubelet
+- kubeadm
+- kubectl
+kube_service: kubelet
+
+packages_to_install:
+- apt-transport-https
+- ca-certificates
+- curl
+- software-properties-common
