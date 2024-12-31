@@ -1,0 +1,21 @@
+---
+- name: Terminate EC2 instance
+  hosts: localhost
+  # gather_facts: false
+  tasks:
+  - name: Terminate EC2 instance
+    amazon.aws.ec2_instance:
+      name: molecule-instance
+      state: terminated
+      region: "{{ hostvars['molecule_instance']['region'] }}"
+      instance_initiated_shutdown_behavior: terminate
+      # wait: yes
+      # force_termination: true
+  # - name: Verify instance termination
+  #     amazon.aws.ec2_instance_info:
+  #       instance_ids: "{{ hostvars['molecule_instance']['instance_id'] }}"
+  #       region: "{{ hostvars['molecule_instance']['region'] }}"
+  #     register: instance_status
+  #     until: instance_status.instances | length == 0
+  #     retries: 30
+  #     delay: 10

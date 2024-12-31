@@ -1,0 +1,34 @@
+driver:
+  name: ec2
+
+platforms:
+- name: molecule-instance
+  instance_type: t2.medium
+  image: ami-053b12d3152c0cc71
+  region: ap-south-1
+  key_name: ansible-keypair
+  security_group_ids: sg-01d20d7554d954d59
+  subnet_id: subnet-053b030af6d5a7fd2
+  tags:
+    Name: molecule-instance
+  instance_profile_name: my-instance-profile
+
+provisioner:
+  name: ansible
+  options:
+    vvv: true
+  inventory:
+    hosts:
+      all:
+        hosts:
+          molecule_instance:
+            image_id: ami-053b12d3152c0cc71
+            region: ap-south-1
+            key_name: ansible-keypair
+            security_group: sg-01d20d7554d954d59
+            subnet_id: subnet-053b030af6d5a7fd2
+  lint:
+    name: ansible-lint
+
+verifier:
+  name: ansible
