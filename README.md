@@ -2,7 +2,7 @@
 # To access the Ansible Playbook please contact the author of this repo.
 <p align="center">
 <img src="https://logos-world.net/wp-content/uploads/2023/06/Kubernetes-Symbol.png" alt="kubernetes image" height="256">
-<img src="https://static-00.iconduck.com/assets.00/ansible-icon-2048x2048-mc4z634w.png" alt="ansible image" height="256">
+<img src="https://cdn.cs.1worldsync.com/73/ca/73ca292f-017f-4095-b594-545e9cd869a5.jpg" alt="ansible image" height="256">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png" alt="ubuntu image" height="256">
 </p>
 # Kubernetes Cluster Initialization with Ansible
