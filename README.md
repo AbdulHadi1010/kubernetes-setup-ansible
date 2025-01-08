@@ -1,4 +1,5 @@
-# This repo contains only README file. To access the Ansible Playbook please contact the author of this repo.
+# This repo contains only README file. 
+# To access the Ansible Playbook please contact the author of this repo.
 
 # Kubernetes Cluster Initialization with Ansible
 
