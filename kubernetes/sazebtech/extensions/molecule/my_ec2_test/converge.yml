@@ -1,8 +1,0 @@
----
-- name: Converge
-  hosts: all
-  become: true
-  tasks:
-  - name: Include the common-tasks role
-    include_role:
-      name: ../../../roles/common-tasks

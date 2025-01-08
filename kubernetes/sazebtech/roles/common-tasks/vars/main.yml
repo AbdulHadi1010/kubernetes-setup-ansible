@@ -1,8 +1,0 @@
----
-# vars file for common-tasks
-# common-tasks/vars/main.yml
-packages_to_install:
-  - apt-transport-https
-  - ca-certificates
-  - curl
-  - software-properties-common
