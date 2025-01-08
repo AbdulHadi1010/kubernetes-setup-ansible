@@ -1,8 +1,8 @@
 # This repo contains only README file. 
 # To access the Ansible Playbook please contact the author of this repo.
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfJEzrXSZXx_m5go7t9K4_qgXXILfihbo3xA&s" alt="kubernetes image" height="256">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqdh8uZdUtuh3Dpq5Fi7OPf3K0XCNUtxLw&s" alt="ansible image" height="256">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png" alt="ubuntu image" height="256">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfJEzrXSZXx_m5go7t9K4_qgXXILfihbo3xA&s" alt="kubernetes image" height="100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqdh8uZdUtuh3Dpq5Fi7OPf3K0XCNUtxLw&s" alt="ansible image" height="100">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png" alt="ubuntu image" height="100">
 
 # Kubernetes Cluster Initialization with Ansible
 
