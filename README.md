@@ -5,6 +5,7 @@
 <img src="https://cdn.cs.1worldsync.com/73/ca/73ca292f-017f-4095-b594-545e9cd869a5.jpg" alt="ansible image" height="256" style="border-radius: 25px";>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png" alt="ubuntu image" height="256">
 </p>
+
 # Kubernetes Cluster Initialization with Ansible
 
 This project provides an Ansible playbook designed to initialize a complete Kubernetes cluster on fresh virtual machines. The playbook automates the setup of Kubernetes components, ensuring a consistent and repeatable deployment process. It has been rigorously tested using [Molecule](https://molecule.readthedocs.io/) with Docker, Vagrant, and EC2 instances.
